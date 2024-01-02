@@ -1,0 +1,27 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: rgb(22, 24, 28);
+    min-width: 50vh;
+}
+
+.App-item-gap {
+    padding: 12px 16px;
+}
+
+.App-title {
+    margin: 0;
+}
+
+.App-link {
+    color: rgb(29, 155, 240);
+    text-decoration: none;
+    display: block;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.App-link:hover {
+    background-color: #1D1F23;
+}
