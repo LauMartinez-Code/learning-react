@@ -6,17 +6,17 @@ const users = [
     userName: 'midudev',
     name: 'Miguel Ángel Durán',
     isFollowing: false,
-    isVerified: false
-  },
-  {
-    userName: 'pheralb',
-    name: 'Pablo H.',
-    isFollowing: true,
     isVerified: true
   },
   {
-    userName: 'PacoHdezs',
-    name: 'Paco Hdez',
+    userName: 'DukiSSJ',
+    name: 'YaSupiste',
+    isFollowing: true,
+    isVerified: false
+  },
+  {
+    userName: 'ekoparty',
+    name: 'Hacking everything',
     isFollowing: false,
     isVerified: false
   },
@@ -24,7 +24,7 @@ const users = [
     userName: 'TMChein',
     name: 'Tomas',
     isFollowing: true,
-    isVerified: false
+    isVerified: true
   }
 ];
 
@@ -42,7 +42,7 @@ export default function App() {
       </section>
 
       <a className='App-link App-item-gap'
-        href='https://twitter.com/i/connect_people'
+        href='https://x.com/i/connect_people'
         target='_blank'
         rel="noreferrer">
           Show more
