@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './TwitterFollowCard.css';
 import verifiedIcon from './assets/XVerified.svg';
 
-// eslint-disable-next-line react/prop-types
 export default function TwitterFollowCard({userName = 'unknown', name, isFollowing: initialIsFollowing, isVerified}) {
   
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
