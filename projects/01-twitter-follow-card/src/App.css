@@ -3,6 +3,7 @@
     flex-direction: column;
     border-radius: 16px;
     background-color: rgb(22, 24, 28);
+    border: 1px solid rgb(47, 51, 54);
     min-width: 50vh;
 }
 
@@ -20,8 +21,8 @@
     display: block;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-}
-
-.App-link:hover {
-    background-color: #1D1F23;
+    
+    &:hover {
+        background-color: #1D1F23;
+    }
 }
