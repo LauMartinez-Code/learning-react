@@ -25,13 +25,13 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  /* place-items: center; */
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
 }
 
@@ -65,4 +65,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.loading {
+  margin: 0 auto;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading__spinner {
+  width: 60px;
+  display: block;
 }

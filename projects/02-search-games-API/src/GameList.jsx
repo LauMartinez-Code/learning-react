@@ -10,7 +10,7 @@ const GameList = () => {
                 gameList.map(g =>
                     <Game key={g.id} game={g} showLink={gameList?.length > 1}/>
                 )
-                : <p>No games found :(</p>
+                : <li>No games found :(</li>
             }
         </ul>
     )

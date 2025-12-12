@@ -9,9 +9,10 @@ const useGames = () => {
 
     useEffect(() => {
         const ac = new AbortController();
+        setLoading(true);
+        setError(null);
+        
         const fetchGames = async () => {
-            setLoading(true);
-            setError(null);
             try {
                 const res = await fetch(API_URL, { signal: ac.signal });
                 if (!res.ok) throw new Error(`API error: ${res.status}`);
@@ -23,8 +24,9 @@ const useGames = () => {
                 setLoading(false);
             }
         };
-
+        
         fetchGames();
+        
         return () => ac.abort();
     }, []);
     
