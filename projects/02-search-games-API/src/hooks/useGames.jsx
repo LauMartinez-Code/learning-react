@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, } from 'react';
 
 const API_URL = 'https://api.sampleapis.com/switch/games';
 
@@ -6,7 +6,7 @@ const useGames = () => {
     const [gameList, setGameList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-
+    
     useEffect(() => {
         const ac = new AbortController();
         setLoading(true);
@@ -30,10 +30,7 @@ const useGames = () => {
         return () => ac.abort();
     }, []);
     
-    function getGameById(id) {
-        let game = gameList.find(game => game.id == id);
-        return game ? [ game ] : [];
-    }
+    const getGameById = id => gameList.find(game => game.id == id);
 
     return { gameList, getGameById, loading, error };
 }

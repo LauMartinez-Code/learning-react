@@ -113,3 +113,7 @@ button:focus-visible {
   margin-right: 10px;
   vertical-align: middle;
 }
+
+.game-detail__release-date-list {
+  padding-inline-start: 30px;
+}

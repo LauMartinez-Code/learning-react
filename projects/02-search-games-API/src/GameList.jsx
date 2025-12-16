@@ -1,5 +1,4 @@
-import { useOutletContext } from "react-router";
-import Game from "./Game";
+import { Link, useOutletContext } from "react-router";
 
 const GameList = () => {
     const gameList = useOutletContext();
@@ -7,8 +6,17 @@ const GameList = () => {
     return (
         <ul>
             {gameList.length > 0 ? 
-                gameList.map(g =>
-                    <Game key={g.id} game={g} showLink={gameList?.length > 1}/>
+                gameList.map(game =>
+                    (<li key={game.id}>
+                        <h3 className="game-list__title">
+                            <Link to={`/${game?.id}`}>
+                                {game?.id} <span className="text-primary">- {game?.name}</span>
+                            </Link>
+                        </h3>
+                        <p className="game-list__subtitle" title="developer">
+                            {game?.developers?.join(", ")}
+                        </p>
+                    </li>)
                 )
                 : <li>No games found :(</li>
             }
