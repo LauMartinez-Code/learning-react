@@ -1,4 +1,4 @@
-import { Outlet, useParams } from "react-router";
+import { Outlet, Link, useParams } from "react-router";
 import useGames from './hooks/useGames';
 import Spinner from "./Spinner";
 
@@ -13,7 +13,19 @@ const GameLayout = () => {
 
     return (
         <>
-            <h1>{gameId ? 'Game details' : 'Switch Games List'}</h1>
+            <h1 className="text-center mb-1">
+                {gameId ? 
+                    (<>
+                        <Link to="/">
+                            <img className="title-back-btn" title="back"
+                                src="/src/assets/arrow.svg" alt=">" />
+                        </Link>
+                        Game details
+                    </>) 
+                    :
+                    'Switch Games List'
+                }
+            </h1>
             
             {loading && <Spinner message="games" />}
             {!loading && error && <p>Error loading games: {error.message}</p>}

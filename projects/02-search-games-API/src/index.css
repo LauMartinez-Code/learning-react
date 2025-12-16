@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  --text-primary: rgba(255, 255, 255, 0.87);
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--text-primary);
   background-color: #242424;
 
   font-synthesis: none;
@@ -20,6 +26,22 @@ a {
 }
 a:hover {
   color: #535bf2;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-bold {
+  font-weight: 700;
 }
 
 body {
@@ -78,4 +100,16 @@ button:focus-visible {
 .spinner__icon {
   width: 60px;
   display: block;
+}
+
+.game-list__subtitle {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.title-back-btn {
+  transform: rotate(180deg);
+  width: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
