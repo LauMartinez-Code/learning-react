@@ -32,7 +32,7 @@ Ejecuta el servidor de desarrollo:
 npm run dev
 ```
 
-Abre `http://localhost:5173` (u la URL indicada por Vite).
+Abre `http://localhost:5173` (o la URL indicada por Vite).
 
 Otros comandos disponibles:
 
