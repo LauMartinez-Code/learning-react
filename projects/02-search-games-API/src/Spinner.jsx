@@ -1,8 +1,10 @@
+import spinnerSVG from './assets/spinner-double.svg';
+
 const Spinner = ({ message = ''}) => {
     return (
         <div className="spinner">
             <img className="spinner__icon"
-                src="/src/assets/spinner-double.svg" alt="spinner" />
+                src={spinnerSVG} alt="spinner" />
             <p>Loading{message ? ` ${message}...` : '...'}</p>
         </div>
     )

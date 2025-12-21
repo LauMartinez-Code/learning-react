@@ -1,6 +1,7 @@
 import { Outlet, Link, useParams } from "react-router";
 import useGames from './hooks/useGames';
 import Spinner from "./Spinner";
+import backIcon from './assets/arrow.svg';
 
 // TODO:
 // - Manejar loading y error states
@@ -18,7 +19,7 @@ const GameLayout = () => {
                     (<>
                         <Link to="/">
                             <img className="title-back-btn" title="back"
-                                src="/src/assets/arrow.svg" alt=">" />
+                                src={backIcon} alt=">" />
                         </Link>
                         Game details
                     </>) 
